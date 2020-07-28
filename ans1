@@ -16,3 +16,18 @@ The big O's that are faster than O(n) are O(logn) or O(1).
 Typical O(logn) is involved with the binary search method but the question is how we sort this in a log(n) or constant manner..
 
 
+
+def binary_search(array,target):
+
+  mid = len(array) // 2
+  
+  if target == array[mid]:
+     return mid
+  
+  elif target > array[mid]:
+     binary_search(array[mid:],target)
+  
+  else:
+     binary_search(array[:mid],target)
+
+
